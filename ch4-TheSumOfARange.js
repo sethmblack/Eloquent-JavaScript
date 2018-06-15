@@ -13,11 +13,11 @@ var total = 0;
 // };
 
 function range (start, end, step) {
-    if (step === undefined && start <= end) {
+    if (step === undefined) {
         step = 1;
-    } else if (step === undefined && start > end) {
-        step = -1;
-    } else if ((step < 0 && start < end) || (step > 0 && start > end)) {
+    };
+    
+    if ((step < 0 && start < end) || (step > 0 && start > end)) {
         step = step * -1;
     };
 
@@ -30,6 +30,7 @@ function range (start, end, step) {
                 array.push(i);
        };
     };
+    
     console.log(array);
 };
 
